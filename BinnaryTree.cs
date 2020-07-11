@@ -52,7 +52,7 @@ namespace Gladiator
         }
         public Node GetGladiatorsPairRoot()
         {
-
+            int i;
             return root;
         }
     }
