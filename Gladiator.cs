@@ -12,9 +12,9 @@ namespace Gladiator
         private int strengthPoints { get; }
         private int dexterityPoints { get; }
 
-        public double Health { get; protected set; }
-        public double Strength {get; protected set; }
-        public double Dexterity { get; protected set; }
+        public double Health { get; set; }
+        public double Strength {get; set; }
+        public double Dexterity { get; set; }
         public int Level { get; set; }
         public enum Skill
         {

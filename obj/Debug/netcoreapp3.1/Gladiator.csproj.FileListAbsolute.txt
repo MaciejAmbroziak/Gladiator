@@ -1,0 +1,13 @@
+C:\Users\macie\source\repos\Gladiator\obj\Debug\netcoreapp3.1\Gladiator.csprojAssemblyReference.cache
+C:\Users\macie\source\repos\Gladiator\obj\Debug\netcoreapp3.1\Gladiator.csproj.CoreCompileInputs.cache
+C:\Users\macie\source\repos\Gladiator\obj\Debug\netcoreapp3.1\Gladiator.AssemblyInfoInputs.cache
+C:\Users\macie\source\repos\Gladiator\obj\Debug\netcoreapp3.1\Gladiator.AssemblyInfo.cs
+C:\Users\macie\source\repos\Gladiator\bin\Debug\netcoreapp3.1\Gladiator.exe
+C:\Users\macie\source\repos\Gladiator\bin\Debug\netcoreapp3.1\Gladiator.deps.json
+C:\Users\macie\source\repos\Gladiator\bin\Debug\netcoreapp3.1\Gladiator.runtimeconfig.json
+C:\Users\macie\source\repos\Gladiator\bin\Debug\netcoreapp3.1\Gladiator.runtimeconfig.dev.json
+C:\Users\macie\source\repos\Gladiator\bin\Debug\netcoreapp3.1\Gladiator.dll
+C:\Users\macie\source\repos\Gladiator\bin\Debug\netcoreapp3.1\Gladiator.pdb
+C:\Users\macie\source\repos\Gladiator\obj\Debug\netcoreapp3.1\Gladiator.dll
+C:\Users\macie\source\repos\Gladiator\obj\Debug\netcoreapp3.1\Gladiator.pdb
+C:\Users\macie\source\repos\Gladiator\obj\Debug\netcoreapp3.1\Gladiator.genruntimeconfig.cache

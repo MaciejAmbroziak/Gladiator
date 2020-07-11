@@ -9,9 +9,9 @@ namespace Gladiator
     {
         Gladiator FirstGladiator;
         Gladiator SecondGladiator;
-        public Combat()
+        public Combat(BinnaryTree Tournament)
         {
-            GladiatorFactory Arena = new GladiatorFactory();
+            Tournament.root
             FirstGladiator = Arena.GenerateRandomGladiator();
             SecondGladiator = Arena.GenerateRandomGladiator();
         }
@@ -23,6 +23,18 @@ namespace Gladiator
             if (diceThrow > dexterityDifference)
             {
                 Console.WriteLine("Missed");
+            }
+            else
+            {
+                DamageTaken(FirstGladiator,SecondGladiator);
+                if(FirstGladiator.Health < 0)
+                {
+                    Console.WriteLine("FirstGladiator Dies");
+                }
+                else
+                {
+                    Console.WriteLine("FirstGladiator Takes ... Damage");
+                }
             }
         }
         private double DexterityNormalization(Gladiator attacker, Gladiator deffender)
@@ -49,9 +61,9 @@ namespace Gladiator
             }
             return gladiator.Strength * coeficient;
         }
-        private double DamageTaken(Gladiator deffender, Gladiator attacker)
+        private void DamageTaken(Gladiator deffender, Gladiator attacker)
         {
-            return deffender.Health - DamageDone(attacker);
+           deffender.Health -= DamageDone(attacker);
         }
         private bool Survived(Gladiator gladiator)
         {
