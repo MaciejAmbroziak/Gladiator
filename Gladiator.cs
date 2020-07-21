@@ -5,59 +5,55 @@ using System.Text;
 
 namespace Gladiator
 {
+    public enum Skill
+    {
+        Low,
+        Medium,
+        High
+    }
     public abstract class Gladiator : IView
     {
         string Name { get; }
         private int healthPoints { get; }
         private int strengthPoints { get; }
         private int dexterityPoints { get; }
-
         public double Health { get; set; }
-        public double Strength {get; set; }
-        public double Dexterity { get; set; }
-        public int Level { get; set; }
-        public enum Skill
-        {
-            Low,
-            Medium,
-            High
-        }
+        public double Stength { get; set; }
+        public double Dexterity {get; set;}
 
-        protected double FullGladiatorSkill(Skill value, double baseSkill) 
-        {
-            return baseSkill * SkillsMultiplier(value) * Level;
-        }
 
+        public Gladiator(string name, Skill health, Skill strength, Skill dexterity)
+        {
+            this.Name = name;
+            Random rnd = new Random();
+            this.healthPoints = rnd.Next(0, 100);
+            this.strengthPoints = rnd.Next(0, 100);
+            this.dexterityPoints = rnd.Next(0, 100);
+            this.Health = this.healthPoints * SkillValue(health);
+            this.Stength = this.strengthPoints * SkillValue(strength);
+            this.Dexterity = this.dexterityPoints * SkillValue(dexterity);
+        }
+        public double SkillValue(Skill level)
+        {
+            switch (level)
+            {
+                case (Skill.Low):
+                    return 0.7;
+                case (Skill.Medium):
+                    return 1.0;
+                case (Skill.High):
+                    return 1;
+                default:
+                    return 1.3;
+
+            }
+               
+        }
         protected int GladiatorLevel()
         {
             Random rnd = new Random();
             return rnd.Next(1, 6);
         }
-
-
-        private double SkillsMultiplier(Skill value)
-        {
-            switch (value)
-            {
-                case Skill.Low:
-                    return 0.75;
-                case Skill.Medium:
-                    return 1.0;
-                case Skill.High:
-                    return 1.25;
-                default:
-                    return 1;
-            }
-        }
-        public Gladiator(string name, Skill healthModifierValue, Skill strengthModifierValue, Skill dexterityModifierValue)
-        {
-            Name = name;
-            Health = FullGladiatorSkill(healthModifierValue, healthPoints);
-            Strength = FullGladiatorSkill(strengthModifierValue, strengthPoints);
-            Dexterity = FullGladiatorSkill(dexterityModifierValue, dexterityPoints);
-            Level = GladiatorLevel();
-        }
-
 
         public void Display()
         {
